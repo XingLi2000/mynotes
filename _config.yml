@@ -1,39 +1,37 @@
-title:               🌱 oldwinterの数字花园
-include:             ['_pages']
-exclude:             ['_includes/notes_graph.json', '_notes/.github','_notes/.obsidian']
-# You may need to change the base URL depending on your deploy configuration.
-# Specifically, when using GitHub Pages, the baseurl should point to where GitHub
-# Pages deploys your repository (which is usually the repository name).
-baseurl:             ''
-
-# If you are using a host that cannot resolve URLs that do
-# not end with .html (such as Neocities), set this to 'true'.
-use_html_extension:  false
-
-# Set to `true` to open non-internal links in new tabs, or
-# set to `false` to open non-internal links in current tab.
+title: "Xing's CMB SBI progress record"
+description: "recording and sharing latest progress of our projects"
+include: ['_pages']
+exclude: ['_includes/notes_graph.json', '_notes/.github', '_notes/.obsidian']
+baseurl: ""  # 留空，适用于 Netlify 部署
+use_html_extension: false
 open_external_links_in_new_tab: true
-
-# Set to `true` to replace tweet URLs with Twitter embeds.
-# Note that doing so will negatively the reader's privacy
-# as their browser will communicate with Twitter's servers.
 embed_tweets: false
 
-permalink:           pretty
+# 让 Jekyll 生成友好的 URL
+permalink: pretty
 relative_permalinks: false
 
+# 使用 Cayman 主题
+theme: jekyll-theme-cayman
+
+# 启用 Jekyll 插件
 plugins:
   - jekyll-last-modified-at
+  - jekyll-feed  # 生成 RSS 订阅
+  - jekyll-sitemap  # 生成站点地图，利于搜索引擎收录
 
+# SASS 样式压缩
 sass:
-  sass_dir:          _sass
-  style:            :compressed
+  sass_dir: _sass
+  style: :compressed
 
+# 设置 collections 以支持笔记管理
 collections:
   notes:
     output: true
-    permalink: /:slug
+    permalink: /notes/:title
 
+# 默认 Front Matter 设置
 defaults:
   - scope:
       path: "**/*"
@@ -43,3 +41,4 @@ defaults:
       path: "_notes/**/*.md"
     values:
       layout: "note"
+      published: true

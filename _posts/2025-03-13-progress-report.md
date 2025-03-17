@@ -103,4 +103,14 @@ x_val shape: (500, 121)
 
 ---
 
-### 
+### to-do list
+
+1. use a more realistic noise, planck noise map
+	1. likelihood paper maps with he corresponding noise maps
+	2. and the actual maps, variance maps
+2. start from 2 maps+noise, then increase the number
+3. add other effects
+4. plik marginal out all of the foregrounds 2015
+5. 2015 foregrounds 
+
+Thursday 1400
