@@ -2,7 +2,7 @@ title: "Xing's CMB SBI progress record"
 description: "recording and sharing latest progress of our projects"
 include: ['_pages']
 exclude: ['_includes/notes_graph.json', '_notes/.github', '_notes/.obsidian']
-baseurl: "/"
+baseurl: ""
 use_html_extension: false
 open_external_links_in_new_tab: true
 embed_tweets: false
@@ -17,8 +17,6 @@ theme: jekyll-theme-cayman
 # 启用 Jekyll 插件
 plugins:
   - jekyll-last-modified-at
-  - jekyll-feed  # 生成 RSS 订阅
-  - jekyll-sitemap  # 生成站点地图，利于搜索引擎收录
 
 # SASS 样式压缩
 sass:
