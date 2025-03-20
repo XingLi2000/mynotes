@@ -2,6 +2,7 @@
 ---
 layout: default
 title: "Xing's CMB SBI progress record"
+permalink: /
 ---
 
 <strong> 最近创建：</strong>
