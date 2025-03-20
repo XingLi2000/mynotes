@@ -5,6 +5,9 @@ title: "Xing's CMB SBI progress record"
 permalink: /
 ---
 
+# Hello world
+这是我的首页测试
+
 <strong> 最近创建：</strong>
 <ul>
   {% assign recent_notes = site.notes | sort: "date created" | reverse %}

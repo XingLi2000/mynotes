@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: Weekly Progress Record
 date: 2024-03-13
 categories: report
