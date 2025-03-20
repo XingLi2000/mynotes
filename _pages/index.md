@@ -4,8 +4,6 @@ title: "Xing's CMB SBI Progress"
 permalink: /
 ---
 
-# CMB SBI Progress Tracking
-
 <section class="recent-updates">
   <h2>Recent Updates</h2>
   
