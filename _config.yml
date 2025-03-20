@@ -1,42 +1,69 @@
-title: "Xing's CMB SBI progress record"
-description: "recording and sharing latest progress of our projects"
-include: ['_pages']
-exclude: ['_includes/notes_graph.json', '_notes/.github', '_notes/.obsidian']
+# _config.yml
+title: "Xing's CMB SBI Progress"
+description: "Recording and sharing latest progress of our projects"
 baseurl: ""
-use_html_extension: false
-open_external_links_in_new_tab: true
-embed_tweets: false
+url: "https://cmb-sbi-records.netlify.app"
 
-# 让 Jekyll 生成友好的 URL
-permalink: pretty
-relative_permalinks: false
+keep_files: ["assets", "assets/images"]
 
-# 使用 Cayman 主题
+# 路径配置
+include: ["_pages", "_layouts", "_sass","assets/images"]
+exclude: 
+  - "_notes/.obsidian"
+  - "node_modules"
+  - "vendor"
+  - "*.sh"
+  - "*.bat"
+  - "*.tmp"
+  - "Gemfile.lock"
+
+# 集合配置
+collections:
+  pages:
+    output: true
+    permalink: /pages/:name/
+  notes:
+    output: true
+    permalink: /notes/:title/
+
 theme: jekyll-theme-cayman
 
-# 启用 Jekyll 插件
+# 布局默认值
+defaults:
+  - scope:
+      path: "_pages/index.md"
+      type: pages
+    values:
+      layout: home
+      permalink: /
+      sitemap: false
+  - scope:
+      path: "_pages/*.md"
+      type: pages
+    values:
+      layout: page
+      sitemap: true
+
+# 插件配置
 plugins:
   - jekyll-last-modified-at
 
-# SASS 样式压缩
+# 构建优化
+keep_files: ["assets"]
+show_dir_listing: false
+future: false
+
+# URL设置
+permalink: pretty
+paginate_path: /page:num/
+
+# Sass配置
 sass:
   sass_dir: _sass
-  style: :compressed
+  style: compressed
+  sourcemap: never
 
-# 设置 collections 以支持笔记管理
-collections:
-  notes:
-    output: true
-    permalink: /notes/:title
-
-# 默认 Front Matter 设置
-defaults:
-  - scope:
-      path: "**/*"
-    values:
-      layout: "default"
-  - scope:
-      path: "_notes/**/*.md"
-    values:
-      layout: "note"
-      published: true
+markdown: kramdown
+highlighter: rouge
+liquid:
+  error_mode: strict
