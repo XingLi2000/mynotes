@@ -34,7 +34,8 @@ Format: OMP  MKL  total_time(s)  avg_cpu(%)
 
 ### 2. small prior overfitting
 
-![Pasted image 20250313123425](/assets/images/20250313123425.png)
+![Pasted image 20250313123425](https://cmb-sbi-records.netlify.app/assets/images/20250313123425.png)
+
 
 - adding offset
 - take logarithms
